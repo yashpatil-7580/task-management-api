@@ -13,7 +13,7 @@ app.put('/updttask/:id',updttask);
 app.delete('/deletetask/:id',deletetask);
 app.get('/filtertask',filtertask);
 
-
-app.listen(3000,'127.0.0.1',()=>{
-    console.log("Server started at http://localhost:3000");
+const PORT = process.env.PORT || 3000;
+app.listen(PORT,()=>{
+    console.log(`Server Started at ${PORT}`);
 })
